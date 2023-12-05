@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path={GistViewerRoutes.main} element={<Main />} />
-        <Route path="/:id" element={<GistDetails />} />
+        <Route path="/gist/:id" element={<GistDetails />} />
       </Routes>
     </Router>
   );

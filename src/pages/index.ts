@@ -1,2 +1,2 @@
-export * from "./Main";
-export * from "./GistDetails";
+export * from "./main";
+export * from "./gist-details";

@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import RadioButtons from "components/buttons/radio-buttons/index";
 
 import { SearchHeaderProps } from "./types";
-import { searchType } from "constants";
+import { searchType } from "../../constants";
 
 export const Search = styled("div")(({ theme }) => ({
   position: "relative",

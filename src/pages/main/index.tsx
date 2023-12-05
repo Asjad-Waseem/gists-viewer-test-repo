@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { SearchHeader } from "components";
 import { Gists } from "sections";
-// import Typography from "@mui/material/Typography";
-// import Card from "@mui/material/Card";
-// import CardActions from "@mui/material/CardActions";
-// import CardContent from "@mui/material/CardContent";
-// import Button from "@mui/material/Button";
 import { GistsService } from "api/services";
 
 export const Main = (): JSX.Element => {
@@ -36,16 +31,8 @@ export const Main = (): JSX.Element => {
         handleChange={(e) => setSearchType(e.target.value)}
         handleSearchClick={getUserPublicGistsList}
       />
+      {/* @ts-ignore */}
       <Gists gists={gistsData} />
-
-      {/* <Card sx={{ minWidth: 275, mt: 10 }}>
-        <CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            {searchVal}
-            {searchType}
-          </Typography>
-        </CardContent>
-      </Card> */}
     </>
   );
 };

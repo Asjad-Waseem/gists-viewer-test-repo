@@ -1,15 +1,17 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router-dom";
 import { CardBasic, Badge } from "components";
 
 import { GistProps } from "./types";
 
 const Gists = ({ gists }: GistProps): JSX.Element => {
+  const navigate = useNavigate();
   return (
     <Box sx={{ mt: 10 }}>
       {gists?.map((gist, index) => {
         // Get an array of values from the files object
-        const fileValues: any = Object.values(gist?.files);
+        const fileValues = Object.values(gist?.files);
         // Access the first object and fetch the file name
         const firstFileObject = fileValues[0]?.filename;
         // Create a Set to keep track of unique languages
@@ -17,6 +19,7 @@ const Gists = ({ gists }: GistProps): JSX.Element => {
         return (
           <CardBasic
             key={index}
+            onClick={() => navigate(`/gist/${gist?.id}`)}
             card={
               <Box>
                 <Typography variant="h6" noWrap component="div" sx={{ mr: 2 }}>
@@ -56,22 +59,6 @@ const Gists = ({ gists }: GistProps): JSX.Element => {
                     }
                     return null;
                   })}
-                  {/* {fileValues?.map((fileVal: any) => {
-                    // Check if the language is not already added
-                    if (
-                      fileVal?.language &&
-                      !uniqueLanguages.has(fileVal?.language)
-                    ) {
-                      uniqueLanguages.add(fileVal?.language);
-                      return (
-                        <Badge
-                          key={fileVal?.language}
-                          name={fileVal?.language}
-                        />
-                      );
-                    }
-                    return null;
-                  })} */}
                 </Box>
               </Box>
             }

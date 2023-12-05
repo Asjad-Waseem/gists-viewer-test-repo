@@ -4,7 +4,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 
 import { RadioButtonProps } from "./types";
-import { searchType } from "constants";
+import { searchType } from "../../../constants";
 
 const RadioButtons = ({
   selectedVal,

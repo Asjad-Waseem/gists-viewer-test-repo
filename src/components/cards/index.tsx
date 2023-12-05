@@ -3,12 +3,20 @@ import Card from "@mui/material/Card";
 
 import { CardProps } from "./types";
 
-const CardBasic = ({ card }: CardProps): JSX.Element => {
+const CardBasic = ({ onClick, card }: CardProps): JSX.Element => {
   return (
-    // <Box className={optionalClassBox}>
-    <Box sx={{ minWidth: 275, mt: 2 }}>
+    <Box
+      component="div"
+      sx={{
+        minWidth: 275,
+        mt: 2,
+        "&:hover": {
+          cursor: "pointer",
+        },
+      }}
+      onClick={onClick}
+    >
       <Card sx={{ p: 2, textAlign: "left" }}>{card}</Card>
-      {/* <Card className={clsx(borderRadiusClass, optionalClassCard)}>{card}</Card> */}
     </Box>
   );
 };
