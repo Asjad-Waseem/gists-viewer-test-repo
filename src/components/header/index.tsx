@@ -61,7 +61,7 @@ const SearchHeader = ({
   handleChange,
   handleSearchClick,
 }: SearchHeaderProps): JSX.Element => {
-  const { regular, debounce } = searchType;
+  const { regular } = searchType;
 
   return (
     <Box sx={{ flexGrow: 1 }}>

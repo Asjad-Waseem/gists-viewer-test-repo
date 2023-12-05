@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-import { DetailedView } from "sections";
+import { DetailedView } from "../../sections";
 
 import { GistsService } from "api/services";
 

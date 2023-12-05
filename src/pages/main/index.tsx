@@ -20,8 +20,6 @@ export const Main = (): JSX.Element => {
       });
   };
 
-  console.log(gistsData, "gists data");
-
   return (
     <>
       <SearchHeader
